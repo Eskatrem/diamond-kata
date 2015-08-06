@@ -20,23 +20,27 @@
   (if (= n 1) 0
       (- (* 2 n) 1)))
 
+(defn repeat-char [n chr]
+  (apply str (take n (repeat chr))))
+
 (defn get-line [chr]
   (if (= chr "A") "A"
       (let [n (get-number chr)
             p (get-number-spaces n)]
         (str chr (repeat-char p " ") chr))))
 
+(defn generate-line [chr]
+  (let [n (get-number chr)]
+    (str (apply str (map get-char (range n -1 -1))) (apply str (map get-char (range 1 (+ 1 n)))))))
+
 (defn generate-lines [chr]
   (let [n (get-number chr)
         line (generate-line chr)]
     (take (+ (* 2 n) 1) (repeat line))))
 
-(defn generate-line [chr]
-  (let [n (get-number chr)]
-    (str (apply str (map get-char (range n -1 -1))) (apply str (map get-char (range 1 (+ 1 n)))))))
 
-(defn repeat-char [n chr]
-  (apply str (take n (repeat chr))))
+
+
 
 (defn make-diamond [letter]
   (let [lines (generate-lines letter)
