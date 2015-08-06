@@ -6,27 +6,8 @@ print-diamond.
 
 ## Usage
 
-user> (ns diamond-kata.core)
+Call function "print-diamond". For example: (print-diamond "D")
 
-nil
-
-diamond-kata.core> (print-diamond "D")
-
-   A
-   
-  B B
-  
- C   C
- 
-D     D
-
- C   C
- 
-  B B
-  
-   A 
-nil
-diamond-kata.core> 
 
 ## License
 
