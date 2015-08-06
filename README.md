@@ -12,12 +12,18 @@ nil
 
 diamond-kata.core> (print-diamond "D")
 
-   A 
-  B B 
- C   C 
-D     D
- C   C 
+   A
+   
   B B
+  
+ C   C
+ 
+D     D
+
+ C   C
+ 
+  B B
+  
    A 
 nil
 diamond-kata.core> 
