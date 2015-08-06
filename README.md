@@ -7,8 +7,11 @@ print-diamond.
 ## Usage
 
 user> (ns diamond-kata.core)
+
 nil
+
 diamond-kata.core> (print-diamond "D")
+
    A 
   B B 
  C   C 
